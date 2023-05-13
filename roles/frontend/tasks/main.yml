@@ -21,5 +21,6 @@
     remote_src: yes
 - name: Make sure a frontend service is running
   ansible.builtin.systemd:
-    state: started
+    state: restarted
     name: nginx
+    enabled: yes

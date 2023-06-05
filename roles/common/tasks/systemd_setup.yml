@@ -1,0 +1,11 @@
+- name: Copy the service file
+  ansible.builtin.copy:
+    src: "{{component_name}}.service"
+    dest: /etc/systemd/system/{{component_name}}.service
+
+- name: Start {{ component_name }} service
+  ansible.builtin.systemd:
+    name: "{{ component_name }}"
+    state: restarted
+    enabled: true
+    daemon_reload: true

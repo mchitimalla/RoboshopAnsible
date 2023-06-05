@@ -1,3 +1,11 @@
-- name: dispatch
-  ansible.builtin.debug:
-    msg: "{{ component_name }}"
+#src_path=$(realpath $0)
+#src_path=$(dirname $src_path)
+#source "${src_path}"/Common.sh
+#source "${src_path}"/CommonConfig.sh
+#component=dispatch
+#
+#setupGolang"
+- name: Set up Dispatch application
+  ansible.builtin.role:
+    name: common
+    tasks_from: setup_golang.yml

@@ -3,7 +3,7 @@
     name: nginx
     state: installed
 - name: Copy config file
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 - name: Remove html directory

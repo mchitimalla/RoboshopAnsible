@@ -1,3 +1,4 @@
-- name: shipping
-  ansible.builtin.debug:
-    msg: "{{ component_name }}"
+- name: Setup Java
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: setup_java.yml

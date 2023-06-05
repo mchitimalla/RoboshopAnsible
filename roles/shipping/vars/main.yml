@@ -1,1 +1,2 @@
 component_name: shipping
+schema_setup: mysql

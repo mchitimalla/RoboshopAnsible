@@ -14,9 +14,9 @@
 
 - name: Setup Schema
   ansible.builtin.import_tasks:
-    name: setup_schema.yml
+    file: setup_schema.yml
 
 - name: Start the service
   ansible.builtin.import_tasks:
-    name: systemd_setup.yml
+    file: systemd_setup.yml
 

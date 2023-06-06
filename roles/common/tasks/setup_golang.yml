@@ -3,12 +3,12 @@
     name: golang
 
 - name: Set up application Prerequisites
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: app_prereq.yml
 
 - name: Install App Dependencies
   ansible.builtin.shell: go mod init {{ component_name }} ;go get; go build
 
 - name: Start Service
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: systemd_setup.yml

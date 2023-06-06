@@ -4,7 +4,7 @@
     state: installed
 
 - name: Setup App prerequisites
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: app_prereq.yml
 
 - name: Dowload Maven dependencies
@@ -13,10 +13,10 @@
     chdir: /app
 
 - name: Setup Schema
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     name: setup_schema.yml
 
 - name: Start the service
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     name: systemd_setup.yml
 

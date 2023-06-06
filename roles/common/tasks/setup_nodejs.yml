@@ -7,16 +7,16 @@
     state: installed
 
 - name: Set up app prerequisites
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: app_prereq.yml
 
 - name: Install npm package
   ansible.builtin.shell: npm install
 
 - name: Setup Schema
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: setup_schema.yml
 
 - name: Start service
-  ansible.builtin.include_tasks:
+  ansible.builtin.import_tasks:
     file: systemd_setup.yml

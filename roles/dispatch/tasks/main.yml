@@ -6,6 +6,6 @@
 #
 #setupGolang"
 - name: Set up Dispatch application
-  ansible.builtin.role:
+  ansible.builtin.import_role:
     name: common
     tasks_from: setup_golang.yml

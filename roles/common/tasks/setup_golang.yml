@@ -8,6 +8,8 @@
 
 - name: Install App Dependencies
   ansible.builtin.shell: go mod init {{ component_name }} ;go get; go build
+  args:
+    chdir: /app
 
 - name: Start Service
   ansible.builtin.import_tasks:

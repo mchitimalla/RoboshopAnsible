@@ -15,8 +15,6 @@ setup.template.settings:
 output.logstash:
   hosts: ["172.31.17.70:5044"]
 processors:
-  - add_host_metadata:
-      when.not.contains.tags: forwarded
 
 #  - drop_fields:
 #      fields: ["field1", "field2", ...]

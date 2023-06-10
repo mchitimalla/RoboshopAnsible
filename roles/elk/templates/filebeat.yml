@@ -14,6 +14,6 @@ setup.template.settings:
   index.number_of_shards: 1
 output.logstash:
   hosts: ["172.31.17.70:5044"]
-#processors:
+processors:
 #  - drop_fields:
 #      fields: ["field1", "field2", ...]

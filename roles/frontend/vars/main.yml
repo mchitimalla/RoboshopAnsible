@@ -1,2 +1,2 @@
 component_name: frontend
-log_file: /etc/log/nginx/access.log
+log_file: /var/log/nginx/access.log

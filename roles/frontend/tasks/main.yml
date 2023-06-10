@@ -6,6 +6,10 @@
   ansible.builtin.template:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
+- name: Copy Nginx Config file
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
 - name: Remove html directory
   ansible.builtin.file:
     path: /usr/share/nginx/html

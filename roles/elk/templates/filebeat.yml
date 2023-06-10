@@ -18,4 +18,4 @@ output.logstash:
   hosts: ["172.31.17.70:5044"]
 processors:
   - drop_fields:
-      fields: ["agent.id", "agent.type","agent.ephemeral_id","@version","input.type","log.file.path","log.offset"]
+      fields: ["agent.id", "agent.type","agent.ephemeral_id","@version","input.type","log.file.path","log.offset","_id","_index","_score","_type","agent.version","ecs.version","tags"]
